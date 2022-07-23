@@ -5,7 +5,16 @@ import React, { Component } from 'react';
 
 class Like extends Component {
   render() {
-    return <i class="fa fa-heart" aria-hidden="true"></i>;
+    let classes = 'fa fa-heart';
+    if (!this.props.liked) classes += '-o';
+    return (
+      <i
+        onClick={this.props.onClick}
+        className={classes}
+        aria-hidden="true"
+        style={{ cursor: 'pointer' }}
+      ></i>
+    );
   }
 }
 
