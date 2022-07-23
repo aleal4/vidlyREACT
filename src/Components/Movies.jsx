@@ -11,11 +11,26 @@ class Movies extends Component {
 
   render() {
     return (
-      <>
-        <h3>Showing {this.state.movies.length} movies in the database</h3>
-        <Header />
-        <Movie />
-      </>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Stock</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.movies.map((movie) => (
+            <tr>
+              <td>{movie.title}</td>
+              <td>{movie.genre.name}</td>
+              <td>{movie.numberInStock}</td>
+              <td>{movie.dailyRentalRate}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     );
   }
 }
