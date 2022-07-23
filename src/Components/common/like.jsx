@@ -16,6 +16,4 @@ const Like = (props) => {
   );
 };
 
-// make a commit
-
 export default Like;
