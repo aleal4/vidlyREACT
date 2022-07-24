@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-const Pagination = (props) => {
+const Pagination = ({ pageSize, itemsCount, currentPage, onPageChange }) => {
   // destructure props object
-  const { pageSize, itemsCount, currentPage, onPageChange } = props;
   console.log(currentPage);
   // find out how many pages for all content to load depending on page size limits and itemCount
   const pagesCount = Math.ceil(itemsCount / pageSize);
