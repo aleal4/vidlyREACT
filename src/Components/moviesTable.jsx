@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Like from './common/like';
+
+class MoviesTable extends Component {
+  render() {}
+}
 
 const MoviesTable = (props) => {
   const { movies, onDelete, onLike, onSort } = props;
